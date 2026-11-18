@@ -23,27 +23,4 @@ openLetterButton.addEventListener("click", () => {
 });
 
     // Music toggle
-    if (musicToggle && backgroundMusic) {
-
-        musicToggle.addEventListener("click", () => {
-
-            if (backgroundMusic.paused) {
-
-                backgroundMusic.play().then(() => {
-                    musicToggle.textContent = "♫ Music: ON";
-                }).catch(() => {
-                    console.log("Music playback failed.");
-                });
-
-            } else {
-
-                backgroundMusic.pause();
-                musicToggle.textContent = "♫ Music: OFF";
-
-            }
-
-        });
-
-    }
-
 });

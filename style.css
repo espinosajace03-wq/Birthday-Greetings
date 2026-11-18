@@ -299,3 +299,143 @@ button {
         opacity: 0;
     }
 }
+
+
+/* IMPROVED RESPONSIVE DESIGN */
+
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* MAIN CONTAINER */
+.birthday-container {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: clamp(16px, 4vw, 30px);
+}
+
+/* WELCOME SCREEN */
+.welcome-screen {
+    width: 100%;
+    max-width: 650px;
+    padding: clamp(25px, 6vh, 60px)
+             clamp(12px, 4vw, 30px);
+}
+
+.welcome-screen h1 {
+    font-size: clamp(38px, 9vw, 85px);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: clamp(10px, 3vw, 14px);
+    letter-spacing: clamp(2px, 1vw, 4px);
+}
+
+.description {
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.7;
+}
+
+/* BUTTON */
+#openLetter {
+    max-width: 100%;
+    padding: 14px clamp(20px, 6vw, 35px);
+    font-size: clamp(12px, 3.5vw, 15px);
+}
+
+/* LETTER SCREEN */
+.letter-screen {
+    width: 100%;
+    max-width: 650px;
+    padding: clamp(10px, 3vw, 20px);
+}
+
+.letter {
+    width: 100%;
+    padding: clamp(25px, 6vw, 55px);
+}
+
+.letter h2 {
+    font-size: clamp(24px, 6vw, 34px);
+}
+
+.letter p {
+    font-size: clamp(14px, 3.5vw, 16px);
+}
+
+/* PHOTO */
+.photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: clamp(20px, 5vw, 30px) 0;
+}
+
+.polaroid {
+    width: min(280px, 85vw);
+}
+
+.birthday-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+    .welcome-screen {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .letter {
+        padding: 22px 18px;
+    }
+
+    .polaroid {
+        width: min(240px, 82vw);
+    }
+}
+
+/* TABLETS */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .welcome-screen {
+        max-width: 600px;
+    }
+
+    .letter-screen {
+        max-width: 600px;
+    }
+}
+
+/* SHORT SCREENS */
+@media (max-height: 650px) {
+    .welcome-screen {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .subtitle {
+        margin-bottom: 15px;
+    }
+
+    .welcome-screen h1 {
+        margin-bottom: 15px;
+    }
+
+    .description {
+        margin-bottom: 25px;
+    }
+}
+
